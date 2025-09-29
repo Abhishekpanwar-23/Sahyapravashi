@@ -1,0 +1,506 @@
+.about-page {
+  font-family: 'TikTok Sans', Arial, sans-serif;
+  background: #f0ebe4; /* Aligned with home page lighter background */
+  color: #222b2e;
+}
+
+.navbar {
+  background: #88472b;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Stronger shadow from home page */
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #f9f6f1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* Ensure icons align well */
+}
+
+.nav-menu a {
+  color: #f9f6f1;
+  text-decoration: none;
+  font-weight: bold; /* Bold font weight for menu items */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: #f29f05;
+  color: #222b2e;
+  transform: translateY(-2px); /* Consistent hover effect */
+}
+
+.login-btn {
+  color: #f9f6f1 !important;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #f9f6f1;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(40,20,10,0.8), rgba(40,20,10,0.8)), url('../images/rajgad.jpg') center/cover;
+  height: 40vh; /* Consistent with Forts page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f9f6f1;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffd699;
+  font-weight: 900;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #f2e6c4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* MISSION SECTION */
+.mission-section {
+  padding: 5rem 0;
+  background: #fff; /* Clean white background */
+  box-shadow: inset 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.mission-section .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.mission-content h2 {
+  color: #88472b;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #394146;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Softer shadow */
+}
+
+/* STORY SECTION (WHAT WE DO) */
+.story-section {
+  padding: 5rem 0;
+  background: #88472b; /* Primary brand brown color */
+  color: #f9f6f1;
+}
+
+.story-section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #ffd699;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.story-card {
+  background: rgba(0,0,0,0.15); /* Darker overlay for better contrast */
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    background: rgba(242, 159, 5, 0.15); /* Subtle gold tint on hover */
+}
+
+.story-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #f29f05; /* Orange/Gold accent */
+}
+
+.story-card h3 {
+  color: #ffd699;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.story-card p {
+  line-height: 1.6;
+  color: #f2e6c4;
+}
+
+/* APPROACH SECTION */
+.approach-section {
+  padding: 5rem 0;
+  background: #f0ebe4; /* Light background for contrast */
+}
+
+.approach-section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #88472b;
+}
+
+.approach-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.approach-text h3 {
+  color: #45613b;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.approach-text h3 i {
+    color: #f29f05;
+    margin-right: 0.5rem;
+}
+
+.approach-text h3:first-child {
+  margin-top: 0;
+}
+
+.approach-text p {
+  line-height: 1.7;
+  color: #394146;
+  margin-bottom: 1.5rem;
+}
+
+.approach-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.stat {
+  background: #fff;
+  color: #222b2e;
+  border: 2px solid #88472b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stat h4 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #f29f05;
+  font-weight: 900;
+}
+
+.stat p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* VALUES SECTION */
+.values-section {
+  padding: 5rem 0;
+  background: #222b2e;
+  color: #f9f6f1;
+}
+
+.values-section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #ffd699;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-item {
+  background: rgba(249,246,241,0.08);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #f29f05; /* Gold accent line */
+  transition: transform 0.3s, background 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    background: rgba(249,246,241,0.15);
+}
+
+.value-item h3 {
+  color: #f29f05;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.value-item h3 i {
+    margin-right: 0.5rem;
+}
+
+.value-item p {
+  line-height: 1.6;
+  color: #f2e6c4;
+}
+
+/* CTA SECTION */
+.cta-section {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(136,71,43,0.9), rgba(136,71,43,0.9)),  url('../images/raigad.jpg') center/cover; /* Changed overlay to brown */
+  background-size: cover;
+  text-align: center;
+  color: #f9f6f1;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffd699;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #f2e6c4;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #f29f05;
+  color: #222b2e;
+  border: 2px solid #f29f05;
+}
+
+.btn-primary:hover {
+  background: #ffd699;
+  transform: translateY(-2px);
+  color: #222b2e;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #f9f6f1;
+  border: 2px solid #f9f6f1;
+}
+
+.btn-secondary:hover {
+  background: #f9f6f1;
+  color: #88472b;
+  transform: translateY(-2px);
+}
+
+/* FOOTER SECTION */
+.footer {
+  background: #222b2e;
+  color: #f9f6f1;
+  padding: 3rem 0 1rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #ffd699;
+  margin-bottom: 1rem;
+}
+
+.footer-section a {
+  color: #f2e6c4;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #f29f05;
+}
+
+.footer-bottom {
+  border-top: 1px solid #45613b;
+  padding-top: 1rem;
+  text-align: center;
+  color: #f2e6c4;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .mission-section .container,
+  .approach-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .approach-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-menu {
+    display: none;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .story-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .approach-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    height: 35vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .mission-content h2,
+  .story-section h2,
+  .approach-section h2,
+  .values-section h2,
+  .cta-content h2 {
+    font-size: 2.2rem;
+  }
+  
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+}

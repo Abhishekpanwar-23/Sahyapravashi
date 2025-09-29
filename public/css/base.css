@@ -1,0 +1,210 @@
+/* Reset and box sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: 'TikTok Sans', Arial, sans-serif;
+  background-color: #f9f6f1;
+  color: #222b2e;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+:root {
+  --color-primary: #88472b;     
+  color-secondary: #45613b;     
+  --color-accent: #f29f05;      
+  --color-bg-light: #f9f6f1;    
+  --color-text-dark: #222b2e;   
+  --color-text-muted: #394146;   
+  --color-text-light: #f2e6c4;   
+  --color-link: #357edd;         
+  --border-radius-md: 12px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'TikTok Sans', Arial, sans-serif;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+  outline: none;
+}
+
+
+button, .btn, .btn-primary, .btn-secondary {
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg-light);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #6d3621;
+  color: var(--color-bg-light);
+  outline: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--color-primary);
+  color: var(--color-bg-light);
+  outline: none;
+}
+
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid #a87c4f;
+  background-color: #f8f1e7;
+  font-size: 1rem;
+  color: #3b2f2f;
+  font-family: 'TikTok Sans', Arial, sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 13px;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--color-bg-light);
+}
+
+
+a:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+button:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}

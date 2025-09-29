@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fort Details | Sahyapravashi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/fort-detail.css">
+</head>
+<body class="fort-detail-page">
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/sahyapravashi-logo.png" alt="Sahyapravashi Logo">
+        <span>Sahyapravashi</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="forts.html" class="active">Forts</a>
+        <a href="bookings.html">Book Trek</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+        <a href="#" class="logout-btn" id="logoutBtn" style="display:none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="fort-hero" id="fortHero">
+      <div class="hero-content">
+        <h1 id="fortName">Loading...</h1>
+        <div class="language-toggle-container">
+          <button id="langToggle" class="lang-toggle">
+            <span id="currentLang">English</span> | <span id="switchLang">मराठी</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="fort-container" id="fortInfo">
+      <div class="fort-details">
+        <section class="fort-overview">
+          <h2 data-i18n="overview">Fort Overview</h2>
+          <div class="fort-stats">
+            <div class="stat-item">
+              <span class="stat-label" data-i18n="location">Location:</span>
+              <span class="stat-value" id="fortLocation">-</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label" data-i18n="baseVillage">Base Village:</span>
+              <span class="stat-value" id="baseVillage">-</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label" data-i18n="difficulty">Difficulty:</span>
+              <span class="stat-value difficulty-badge" id="difficulty">-</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label" data-i18n="height">Height:</span>
+              <span class="stat-value" id="height">-</span>
+            </div>
+          </div>
+          <p class="fort-description" id="fortDescription" data-i18n="description">Loading fort description...</p>
+        </section>
+
+        <section class="historical-info">
+          <h2 data-i18n="history">Historical Significance</h2>
+          <div class="history-content" id="historyContent" data-i18n="historyText">
+            Loading historical information...
+          </div>
+        </section>
+
+        <section class="inside-fort">
+          <h2 data-i18n="insideFort">Inside the Fort</h2>
+          <div class="fort-features" id="fortFeatures">
+            <div class="feature-grid">
+              <div class="feature-item">
+                <h3 data-i18n="structures">Structures & Buildings</h3>
+                <ul id="structures" data-i18n="structuresList">
+                  <li>Loading...</li>
+                </ul>
+              </div>
+              <div class="feature-item">
+                <h3 data-i18n="waterSources">Water Sources</h3>
+                <ul id="waterSources" data-i18n="waterList">
+                  <li>Loading...</li>
+                </ul>
+              </div>
+              <div class="feature-item">
+                <h3 data-i18n="temples">Temples & Religious Sites</h3>
+                <ul id="temples" data-i18n="templesList">
+                  <li>Loading...</li>
+                </ul>
+              </div>
+              <div class="feature-item">
+                <h3 data-i18n="viewpoints">Key Viewpoints</h3>
+                <ul id="viewpoints" data-i18n="viewpointsList">
+                  <li>Loading...</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="points-of-interest">
+          <h2 data-i18n="pointsOfInterest">Points of Interest</h2>
+          <div class="poi-grid" id="poiGrid">
+            <div class="poi-item">
+              <h3 data-i18n="attractions">Major Attractions</h3>
+              <ul id="attractions" data-i18n="attractionsList">
+                <li>Loading...</li>
+              </ul>
+            </div>
+            <div class="poi-item">
+              <h3 data-i18n="photography">Photography Spots</h3>
+              <ul id="photographySpots" data-i18n="photographyList">
+                <li>Loading...</li>
+              </ul>
+            </div>
+            <div class="poi-item">
+              <h3 data-i18n="wildlife">Wildlife & Flora</h3>
+              <ul id="wildlife" data-i18n="wildlifeList">
+                <li>Loading...</li>
+              </ul>
+            </div>
+            <div class="poi-item">
+              <h3 data-i18n="facilities">Facilities Available</h3>
+              <ul id="facilities" data-i18n="facilitiesList">
+                <li>Loading...</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="route-info">
+          <h2 data-i18n="routeInfo">Route Information</h2>
+          <div class="route-details">
+            <div class="route-text" id="routeText" data-i18n="routeDescription">
+              Loading route information...
+            </div>
+            <div class="base-village-info">
+              <h3 data-i18n="baseVillageInfo">Base Village Details</h3>
+              <p id="baseVillageDetails" data-i18n="baseVillageText">Loading base village information...</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="trek-details">
+          <h2 data-i18n="trekDetails">Trekking Details</h2>
+          <div class="trek-info-grid">
+            <div class="trek-info-item">
+              <strong data-i18n="duration">Duration:</strong>
+              <span id="duration" data-i18n="durationValue">-</span>
+            </div>
+            <div class="trek-info-item">
+              <strong data-i18n="distance">Distance:</strong>
+              <span id="distance" data-i18n="distanceValue">-</span>
+            </div>
+            <div class="trek-info-item">
+              <strong data-i18n="bestTime">Best Time:</strong>
+              <span id="bestTime" data-i18n="bestTimeValue">-</span>
+            </div>
+            <div class="trek-info-item">
+              <strong data-i18n="grade">Grade:</strong>
+              <span id="grade" data-i18n="gradeValue">-</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="booking-section">
+          <h2 data-i18n="bookTrek">Book Your Trek</h2>
+          <p data-i18n="bookingText">Ready to explore this magnificent fort? Join our guided trek and experience history firsthand.</p>
+          <div class="booking-buttons">
+            <a href="bookings.html" class="btn-primary" data-i18n="bookNow">Book Now</a>
+            <a href="contact.html" class="btn-secondary" data-i18n="inquire">Inquire</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="fort-sidebar">
+        <div class="fort-image-container">
+          <img id="fortImage" src="" alt="Fort Image" class="fort-main-image">
+        </div>
+        
+        <div class="premium-map-section">
+          <h3 data-i18n="interactiveMap">Interactive Route Map</h3>
+          <div class="map-container" id="mapContainer">
+            <div class="premium-notice" id="premiumNotice">
+              <p data-i18n="premiumFeature">This feature is available for trek package customers</p>
+              <a href="bookings.html" class="unlock-btn" data-i18n="unlockMap">Unlock with Trek Package</a>
+            </div>
+            <div class="premium-map-controls" id="mapControls" style="display:none;">
+              <button id="viewMapBtn" class="view-map-btn" data-i18n="viewMap">View Map</button>
+              <div id="mapDisplay" style="display:none;">
+                <div id="googleMap" style="height:300px;width:100%;border-radius:8px;"></div>
+                <div class="map-legend">
+                  <small data-i18n="mapLegend">Click markers for points of interest</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sahyapravashi</h3>
+          <p>Preserving Maratha heritage through responsible trekking and cultural education.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="forts.html">Forts</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="feedback.html">Feedback</a>
+          <a href="contact.html">Help Center</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sahyapravashi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script>
+  <script src="javascript/fort-detail.js"></script>
+  <script src="javascript/session.js"></script>
+</body>
+</html>

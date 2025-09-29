@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment | Sahyapravashi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/payment.css" />
+</head>
+<body class="payment-page">
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/sahyapravashi-logo.png" alt="Sahyapravashi Logo" />
+        <span>Sahyapravashi</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="forts.html"><i class="fas fa-landmark"></i> Forts</a>
+        <a href="bookings.html" class="active"><i class="fas fa-ticket-alt"></i> Book Trek</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+      </nav>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="payment-hero">
+      <div class="payment-hero-content">
+        <h1>Confirm Payment</h1>
+        <p>Complete your booking for Rajgad Trek</p>
+      </div>
+    </section>
+
+    <section class="payment-section container">
+      <div class="summary-card">
+        <h2>Order Summary</h2>
+        <div class="summary-details">
+          <p>Trek Package: <span>Rajgad Trek</span></p>
+          <p>Participants: <span>2</span></p>
+          <p>Package Price: <span>₹1,199 / person</span></p>
+          <p>Service Fees: <span>₹51</span></p>
+          <div class="total-row">
+            <h3>Total Amount Due:</h3>
+            <h3><span id="totalAmount">₹2,449</span></h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="payment-card">
+        <h2>Select Payment Method</h2>
+        
+        <div class="tab-controls">
+          <button class="tab-btn active" data-tab="online-payment">
+            <i class="fas fa-credit-card"></i> Online Payment
+          </button>
+          <button class="tab-btn" data-tab="cash-payment">
+            <i class="fas fa-money-bill-wave"></i> Cash at Base
+          </button>
+        </div>
+
+        <div id="online-payment" class="tab-content active">
+          <form id="onlinePaymentForm" class="payment-form">
+            <div class="payment-icons">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-paypal"></i>
+              <i class="fab fa-google-pay"></i>
+            </div>
+            <p class="secure-text">Securely pay using Credit Card, UPI, or Netbanking.</p>
+
+            <input type="text" placeholder="Card Holder Name" required />
+            <input type="text" placeholder="Card Number" pattern="[0-9\s]{13,19}" required />
+            <div class="expiry-cvv-group">
+              <input type="text" placeholder="MM/YY" pattern="\d{2}/\d{2}" required />
+              <input type="text" placeholder="CVV" pattern="\d{3,4}" required />
+            </div>
+
+            <button type="submit" class="btn-primary">
+              Pay ₹2,449 Securely <i class="fas fa-lock"></i>
+            </button>
+          </form>
+        </div>
+
+        <div id="cash-payment" class="tab-content">
+          <div class="cash-message">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Payment Pending Confirmation</h3>
+            <p>
+              By proceeding, you agree to pay the total amount of 
+              **₹2,449** in cash to your guide upon arrival at the base village.
+              A confirmation email with guide details will be sent shortly.
+            </p>
+            <p class="warning-text">
+              Failure to show up or late cancellation may incur a penalty fee on future bookings.
+            </p>
+          </div>
+          <button type="submit" class="btn-primary" id="confirmCashBtn">
+            Confirm Booking & Pay Later <i class="fas fa-check-circle"></i>
+          </button>
+        </div>
+        
+        <div id="paymentMessage" class="payment-message" style="display:none;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sahyapravashi</h3>
+          <p>Preserving Maratha heritage through responsible trekking and cultural education.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="forts.html">Forts</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="feedback.html">Feedback</a>
+          <a href="contact.html">Help Center</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sahyapravashi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/payment.js"></script>
+</body>
+</html>

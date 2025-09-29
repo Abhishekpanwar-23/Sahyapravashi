@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Sahyapravashi Fort Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="home-page">
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/sahyapravashi-logo.png" alt="Sahyapravashi Logo">
+        <span>Sahyapravashi</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="forts.html"><i class="fas fa-landmark"></i> Forts</a>
+        <a href="bookings.html"><i class="fas fa-ticket-alt"></i> Book Trek</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="login.html" class="login-btn" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="#" class="logout-btn" id="logoutBtn" style="display:none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/contact-bg.jpg" class="d-block w-100" alt="Preserve Heritage, Empower Tomorrow">
+        <div class="carousel-caption">
+          <h3 class="animate__animated animate__fadeInDown">Preserve Heritage, Empower Tomorrow</h3>
+          <p class="animate__animated animate__fadeInUp">Welcome to Sahyapravashi – your digital gateway to efficient fort preservation, maintenance tracking, and visitor management.</p>
+          <a href="about.html" class="carousel-btn animate__animated animate__fadeInUp">Learn More</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/harishchandragad.jpg" class="d-block w-100" alt="Smart Maintenance for Timeless Monuments">
+        <div class="carousel-caption">
+          <h3 class="animate__animated animate__fadeInDown">Smart Maintenance for Timeless Monuments</h3>
+          <p class="animate__animated animate__fadeInUp">Our system enables real-time monitoring, task scheduling, and historical record-keeping of conservation activities.</p>
+          <a href="bookings.html" class="carousel-btn animate__animated animate__fadeInUp">View Bookings</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/sindhudurg.jpg" class="d-block w-100" alt="Seamless Visitor Experience, Elevated Management">
+        <div class="carousel-caption">
+          <h3 class="animate__animated animate__fadeInDown">Seamless Visitor Experience, Elevated Management</h3>
+          <p class="animate__animated animate__fadeInUp">Manage entry tickets, guided tours, and visitor analytics with one centralized platform.</p>
+          <a href="contact.html" class="carousel-btn animate__animated animate__fadeInUp">Contact Support</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <main class="main-content">
+    <section class="stats-section">
+      <div class="container">
+        <h2>System Overview</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-landmark stat-icon"></i>
+            <div class="stat-value">24</div>
+            <div class="stat-label">Forts Under Management</div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-tools stat-icon"></i>
+            <div class="stat-value text-danger">3</div>
+            <div class="stat-label">Urgent Maintenance Tasks</div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-ticket-alt stat-icon"></i>
+            <div class="stat-value">1289</div>
+            <div class="stat-label">Tickets Booked Today</div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-users stat-icon"></i>
+            <div class="stat-value">7,500+</div>
+            <div class="stat-label">Total Registered Trekkers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="forts-section">
+      <div class="container">
+        <h2 class="section-title">Featured Forts for Trekking & Monitoring</h2>
+        <div class="forts-grid" id="fortsGrid"></div>
+        <div class="text-center mt-5">
+            <a href="forts.html" class="view-all-btn">View All Managed Forts <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      const forts = [
+        {
+          name: "Pratapgad",
+          location: "Satara District",
+          image: "images/pratapgad.jpg",
+          difficulty: "Moderate",
+          description: "Famous for Shivaji Maharaj’s victory, Pratapgad’s lush slopes and iconic watchtowers offer breathtaking Sahyadri views.",
+          detailPage: "fort-detail.html?id=pratapgad"
+        },
+        {
+          name: "Raigad",
+          location: "Raigad District",
+          image: "images/raigad.jpg",
+          difficulty: "Moderate",
+          description: "Capital fort of the Marathas, Raigad is steeped in history with its famed ropeway and grand Maha Darwaja.",
+          detailPage: "fort-detail.html?id=raigad"
+        },
+        {
+          name: "Sinhagad",
+          location: "Pune District",
+          image: "images/sinhagad.jpg",
+          difficulty: "Easy",
+          description: "Known for its pivotal role in Maratha history and the bravery of Tanaji Malusare, Sinhagad offers sweeping Sahyadri vistas and historic bastions.",
+          detailPage: "fort-detail.html?id=sinhagad"
+        },
+        {
+          name: "Shivneri",
+          location: "Junnar, Pune",
+          image: "images/shivneri.jpg",
+          difficulty: "Easy",
+          description: "Birthplace of Chhatrapati Shivaji Maharaj, Shivneri stands with bastioned gates amidst wildflowers and ancient step wells.",
+          detailPage: "fort-detail.html?id=shivneri"
+        }
+      ];
+
+      function renderForts() {
+        const grid = document.getElementById('fortsGrid');
+        forts.forEach(fort => {
+          const card = document.createElement('div');
+          card.className = 'fort-card';
+          card.innerHTML = `
+            <img src="${fort.image}" class="fort-image" alt="${fort.name}">
+            <div class="fort-info">
+              <div class="fort-name">${fort.name}</div>
+              <div class="fort-location"><i class="fas fa-map-marker-alt"></i> ${fort.location}</div>
+              <span class="difficulty">${fort.difficulty}</span>
+              <div class="fort-description">${fort.description}</div>
+              <a href="${fort.detailPage}" class="view-btn">View Details <i class="fas fa-eye"></i></a>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+      window.onload = renderForts;
+    </script>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sahyapravashi</h3>
+          <p>Preserving Maratha heritage through responsible trekking and cultural education.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="forts.html">Forts</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="feedback.html">Feedback</a>
+          <a href="contact.html">Help Center</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sahyapravashi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="javascript/session.js"></script>
+</body>
+</html>

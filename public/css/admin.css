@@ -1,0 +1,201 @@
+/* === General Styles & Typography === */
+body {
+    font-family: 'TikTok Sans', Arial, sans-serif;
+    background: #f9f6f1; /* Light cream background from home.css */
+    color: #222b2e;      /* Dark charcoal text color */
+    margin: 0;
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    color: #88472b;      /* Rich brown from home.css */
+    margin-bottom: 1rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222b2e;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #e0d9ce;
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+}
+
+img {
+    max-width: 120px;
+    max-height: 80px;
+    display: block;
+    border-radius: 6px;
+}
+
+/* === Navigation === */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    background: #88472b; /* Rich brown from home.css navbar */
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: #f9f6f1;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav button:hover,
+nav button.active {
+    background: #f29f05; /* Golden yellow highlight */
+    color: #222b2e;
+}
+
+
+/* === Sections & Cards === */
+.section {
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e0d9ce;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #88472b;
+}
+
+
+/* === Forms === */
+form input,
+form textarea,
+form select {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #c9a98d;
+    border-radius: 7px;
+    background: #fdfcf9;
+    font-size: 1rem;
+    font-family: 'TikTok Sans', Arial, sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #f29f05;
+    box-shadow: 0 0 0 3px rgba(242, 159, 5, 0.25);
+}
+
+#editFortForm div, #editPackageForm div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+
+/* === Buttons === */
+button {
+    border: none;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'TikTok Sans', Arial, sans-serif;
+}
+
+/* Primary action button (e.g., Add, Update) */
+button[type="submit"] {
+    background: #f29f05; /* Golden yellow from home.css */
+    color: #222b2e;
+}
+
+button[type="submit"]:hover {
+    background: #ffd699; /* Lighter gold on hover */
+    color: #88472b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Table action buttons (e.g., Edit, Approve) */
+td button {
+    background: #88472b;
+    color: #f9f6f1;
+    margin-right: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+td button:hover {
+    background: #6a3822; /* Darker brown */
+}
+
+/* Special button styles for distinct actions */
+.btn-approve { background: #28a745; color: white; }
+.btn-approve:hover { background: #218838; }
+
+.btn-reject, .btn-delete { background: #c53030; color: white; }
+.btn-reject:hover, .btn-delete:hover { background: #9b2c2c; }
+
+.btn-cancel { background: #6c757d; color: white; }
+.btn-cancel:hover { background: #5a6268; }
+
+
+/* === Tables === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures border-radius applies to corners */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0d9ce; /* Light brown-ish border */
+    text-align: left;
+    vertical-align: middle;
+}
+
+thead th {
+    background: #88472b; /* Rich brown from home.css */
+    color: #ffd699;      /* Light gold text */
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr:hover {
+    background-color: #fdfcf9; /* Very light cream on row hover */
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}

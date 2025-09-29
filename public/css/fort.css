@@ -1,0 +1,328 @@
+.forts-page{
+  font-family:'TikTok Sans',Arial,sans-serif;
+  background:#f0ebe4; /* Aligned with home page lighter background */
+  color:#222b2e;
+}
+
+.navbar{
+  background:#88472b;
+  padding:1rem 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2); /* Stronger shadow from home page */
+}
+
+.nav-container{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 2rem;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  color:#f9f6f1;
+  font-size:1.5rem;
+  font-weight:bold;
+}
+
+.logo img{
+  height:40px;
+  margin-right:0.5rem;
+}
+
+.nav-menu{
+  display:flex;
+  gap:2rem;
+  align-items:center;
+}
+
+.nav-menu a{
+  color:#f9f6f1;
+  text-decoration:none;
+  padding:0.5rem 1rem;
+  border-radius:6px;
+  transition:background 0.3s ease, transform 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active{
+  background:#f29f05;
+  color:#222b2e;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.login-btn {
+  color: #f9f6f1 !important;
+  font-weight: bold;
+}
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:25px;
+  height:3px;
+  background:#f9f6f1;
+  margin:3px 0;
+  transition:0.3s;
+}
+
+.hero-section{
+  background:linear-gradient(rgba(40,20,10,0.75),rgba(40,20,10,0.75)),url('../images/contact-bg.jpg')center/cover;
+  height:40vh; /* Slightly reduced height for better content focus */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#f9f6f1;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-content h1{
+  font-size:3.5rem; /* Slightly larger title */
+  color:#ffd699;
+  margin-bottom:0.5rem;
+  font-weight: 800;
+}
+
+.hero-content p{
+  font-size:1.2rem;
+  color:#f2e6c4;
+}
+
+/* SEARCH AND FILTER BAR STYLES */
+.filter-bar {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.filter-bar input,
+.filter-bar select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.filter-bar .view-btn {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    background: #88472b;
+    color: #f9f6f1;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-bar .view-btn:hover {
+    background: #f29f05;
+    color: #222b2e;
+}
+/* END SEARCH AND FILTER BAR STYLES */
+
+
+.forts-section{
+  padding:4rem 0;
+}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 2rem;
+}
+
+.forts-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); /* Increased min width for better card proportions */
+  gap:2rem;
+}
+
+.fort-card{
+  background:#fff;
+  color:#222b2e;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  border: none;
+  transition:transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.fort-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 30px rgba(136, 71, 43, 0.25); /* Brown shadow on hover */
+}
+
+.fort-image{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius: 10px 10px 0 0; /* Rounded top corners only */
+}
+
+.fort-info{
+  padding:1.2rem;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start; /* Aligned content to top */
+}
+
+.fort-name{
+  font-size:1.3rem;
+  font-weight:700;
+  margin-bottom:0.5rem;
+  color:#2c2c2c; /* Dark grey text like in the image */
+}
+
+.fort-location{
+  font-size:0.9rem;
+  color: #666;
+  margin-bottom:0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.fort-location i {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.difficulty{
+  background:#f4a261; /* Orange-yellow background like in image */
+  color:#2c2c2c;
+  border-radius:20px; /* Pill-shaped like in image */
+  display:inline-block;
+  font-size:0.8rem;
+  font-weight:600;
+  padding:0.3rem 0.8rem;
+  margin:0 0 1rem 0;
+  align-self: flex-start;
+}
+
+.fort-description{
+  font-size:0.9rem;
+  color:#666;
+  margin-bottom:1.2rem;
+  flex-grow: 1;
+  line-height: 1.4;
+}
+
+.view-btn{
+  background:#f4a261; /* Orange-yellow background like in image */
+  border:none;
+  color:#fff;
+  font-weight:600;
+  border-radius:6px;
+  padding:0.7rem 1.2rem;
+  text-decoration:none;
+  font-size:0.9rem;
+  cursor:pointer;
+  transition:background 0.18s, transform 0.2s;
+  align-self: stretch;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.view-btn:hover{
+  background:#e76f51; /* Slightly darker orange on hover */
+  color:#fff;
+  transform: translateY(-1px);
+}
+
+.footer{
+  background:#222b2e;
+  color:#f9f6f1;
+  padding:3rem 0 1rem;
+}
+
+.footer-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 2rem;
+}
+
+.footer-content{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:2rem;
+  margin-bottom:2rem;
+}
+
+.footer-section h3,
+.footer-section h4{
+  color:#ffd699;
+  margin-bottom:1rem;
+}
+
+.footer-section a{
+  color:#f2e6c4;
+  text-decoration:none;
+  display:block;
+  margin-bottom:0.5rem;
+  transition:color 0.3s ease;
+}
+
+.footer-section a:hover{
+  color:#f29f05;
+}
+
+.footer-bottom{
+  border-top:1px solid #45613b;
+  padding-top:1rem;
+  text-align:center;
+  color:#f2e6c4;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media(max-width:1024px){
+  .hero-content h1{font-size:2.5rem;}
+  .forts-grid{gap:1.5rem;}
+  .fort-card{border-radius:8px;}
+  .container{padding:0 1rem;}
+}
+@media(max-width:768px){
+  .filter-bar {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+  .filter-bar input,
+  .filter-bar select,
+  .filter-bar .view-btn {
+      width: 100%;
+      box-sizing: border-box;
+  }
+  .nav-menu { display: none; }
+  .nav-container { flex-direction: row; justify-content: space-between; }
+  .hamburger { display: flex; }
+}
+@media(max-width:600px){
+  .hero-section{height:30vh;}
+  .forts-section{padding:2rem 0;}
+  .container{padding:0 0.6rem;}
+  .forts-grid{grid-template-columns:1fr;}
+  .fort-card .fort-image{height:160px;}
+  .fort-info { padding: 1rem; }
+}

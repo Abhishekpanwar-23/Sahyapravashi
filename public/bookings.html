@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Trek | Sahyapravashi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/booking.css" />
+</head>
+<body class="bookings-page">
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/sahyapravashi-logo.png" alt="Sahyapravashi Logo" />
+        <span>Sahyapravashi</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="forts.html"><i class="fas fa-landmark"></i> Forts</a>
+        <a href="bookings.html" class="active"><i class="fas fa-ticket-alt"></i> Book Trek</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="login.html" class="login-btn" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="#" class="logout-btn" id="logoutBtn" style="display:none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="trek-hero">
+      <div class="trek-hero-content">
+        <h1>Available Trek Packages</h1>
+        <p>Your Adventure Starts Now—Select a Package to Book!</p>
+      </div>
+    </section>
+
+    <section class="packages-section container">
+      <div id="packagesGrid" class="packages-grid"></div>
+    </section>
+
+    <section id="packageDetailsSection" class="container package-details-section" style="display:none;">
+      <!-- JS will inject package details here -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sahyapravashi</h3>
+          <p>Preserving Maratha heritage through responsible trekking and cultural education.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="forts.html">Forts</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="feedback.html">Feedback</a>
+          <a href="contact.html">Help Center</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sahyapravashi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JS -->
+  <script src="./javascript/booking.js"></script>
+  <script src="./javascript/session.js"></script>
+</body>
+</html>

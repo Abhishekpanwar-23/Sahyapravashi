@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Sahyapravashi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h2>Register</h2>
+      <form id="signupForm" method="post">
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <label for="email">Enter Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password (min 6 chars)" minlength="6" required>
+        <button type="submit">Register</button>
+        <div id="message"></div>
+        <p>Already have an account? <a href="Login.html">Login</a></p>
+      </form>
+      <script src="./javascript/signup.js"></script>
+
+    </div>
+  </div>
+</body>
+</html>

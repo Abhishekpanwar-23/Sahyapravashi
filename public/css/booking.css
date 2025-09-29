@@ -1,0 +1,452 @@
+.bookings-page {
+  font-family: 'TikTok Sans', Arial, sans-serif;
+  background: #f0ebe4; /* Consistent light background */
+  color: #222b2e;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: #88472b;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Stronger shadow */
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #f9f6f1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #f9f6f1;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: #f29f05;
+  color: #222b2e;
+  transform: translateY(-2px);
+}
+
+.login-btn {
+  color: #f9f6f1 !important;
+  font-weight: bold;
+}
+
+.trek-hero {
+  background: linear-gradient(rgba(136, 71, 43, 0.85), rgba(136, 71, 43, 0.85)),
+    url('../images/contact-bg.jpg') center/cover no-repeat;
+  height: 40vh; /* Consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.trek-hero-content h1 {
+  font-size: 3.5rem;
+  color: #ffd699;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+.trek-hero-content p {
+  color: #f2e6c4;
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Larger min width */
+  gap: 2rem; /* Increased gap */
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.package-card {
+  position: relative;
+  /* Custom property set in JS now */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 300px;
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Align content to bottom */
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.package-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 25px rgba(242, 159, 5, 0.3);
+}
+
+.package-card img {
+  width: 90px; /* Larger image */
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f9f6f1; /* White border */
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  position: absolute;
+  top: 15%;
+}
+
+.package-card h3 {
+  color: #ffd699;
+  font-size: 1.3rem; /* Larger font */
+  font-weight: 800;
+  text-align: center;
+  margin: 0.5rem 0 0.3rem 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 0 10px;
+  line-height: 1.2;
+}
+
+.package-card .card-difficulty {
+    color: #f9f6f1;
+    background: #45613b;
+    padding: 0.2rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.view-details-btn {
+  padding: 0.5rem 1.5rem;
+  background: #f29f05;
+  border: none;
+  border-radius: 8px;
+  color: #222b2e;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.view-details-btn:hover {
+  background: #ffd699;
+  color: #88472b;
+}
+
+/* DETAILS SECTION */
+.package-details-section {
+  background: #fff;
+  padding: 3rem; /* Larger padding */
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  margin-bottom: 5rem;
+  border: 1px solid #ddd;
+}
+
+.package-details-section h2 {
+  color: #88472b;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.trek-price {
+    margin-bottom: 2rem;
+}
+
+.trek-price span {
+  background: #f29f05;
+  color: #222b2e;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.trek-basic-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    background: #f9f6f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px dashed #ffd699;
+}
+
+.trek-basic-info-grid strong {
+    color: #88472b;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.trek-basic-info-grid i {
+    color: #f29f05;
+    margin-right: 0.3rem;
+}
+
+.trek-itinerary,
+.trek-about,
+.trek-carry {
+    margin-bottom: 2.5rem;
+}
+
+.trek-itinerary h3,
+.trek-about h3,
+.trek-carry h3,
+.booking-form-container h3 {
+    color: #45613b;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.trek-itinerary ul,
+.trek-carry ul {
+  list-style-type: none; /* Remove default bullets */
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.trek-itinerary li,
+.trek-carry li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted #ccc;
+    color: #394146;
+    font-size: 1rem;
+}
+
+.trek-itinerary li:last-child,
+.trek-carry li:last-child {
+    border-bottom: none;
+}
+
+.trek-about p {
+    line-height: 1.7;
+    color: #394146;
+}
+
+.booking-form-container {
+    padding: 2rem;
+    background: #f9f6f1;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.booking-form-container input,
+.booking-form-container textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 1rem;
+  color: #3b2f2f;
+  font-family: 'TikTok Sans', Arial, sans-serif;
+  transition: border-color 0.3s;
+}
+
+.booking-form-container input:focus,
+.booking-form-container textarea:focus {
+    border-color: #f29f05;
+    box-shadow: 0 0 0 3px rgba(242, 159, 5, 0.2);
+    outline: none;
+}
+
+.booking-form-container textarea {
+  resize: vertical;
+}
+
+button.btn-primary {
+  background: #88472b;
+  color: #f9f6f1;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  padding: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background: #f29f05;
+  color: #222b2e;
+}
+
+button.btn-secondary {
+  margin-top: 1rem;
+  background: transparent;
+  color: #88472b;
+  border: 2px solid #88472b;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button.btn-secondary:hover {
+  background: #88472b;
+  color: #f9f6f1;
+}
+
+#formSuccess {
+  font-weight: 700;
+  margin-top: 1rem;
+  text-align: center;
+  color: #45613b;
+  display: none;
+}
+
+/* FOOTER STYLES */
+.footer{
+  background:#222b2e;
+  color:#f9f6f1;
+  padding:3rem 0 1rem;
+}
+
+.footer-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 2rem;
+}
+
+.footer-content{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:2rem;
+  margin-bottom:2rem;
+}
+
+.footer-section h3,
+.footer-section h4{
+  color:#ffd699;
+  margin-bottom:1rem;
+}
+
+.footer-section a{
+  color:#f2e6c4;
+  text-decoration:none;
+  display:block;
+  margin-bottom:0.5rem;
+  transition:color 0.3s ease;
+}
+
+.footer-section a:hover{
+  color:#f29f05;
+}
+
+.footer-bottom{
+  border-top:1px solid #45613b;
+  padding-top:1rem;
+  text-align:center;
+  color:#f2e6c4;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .packages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .package-details-section {
+    padding: 2rem;
+  }
+  
+  .trek-basic-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu { display: none; }
+  .nav-container { padding: 0 1rem; justify-content: space-between; }
+  .hamburger { display: flex; }
+
+  .trek-hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .trek-hero {
+    height: 30vh;
+  }
+  
+  .trek-hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .packages-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .package-card {
+    min-height: 250px;
+    max-width: 100%;
+  }
+  
+  .package-card img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .package-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .package-details-section {
+    padding: 1.5rem;
+  }
+}
